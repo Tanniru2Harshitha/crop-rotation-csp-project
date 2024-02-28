@@ -1,0 +1,51 @@
+.toolbar{
+    background-color: green;
+    padding:10px;
+}
+.menus{
+    display:flex;
+}
+.menus a{
+    text-decoration: none; 
+  color: #bea3a3; 
+  padding: 8px 12px; 
+  margin-right: 10px; 
+  border-radius: 4px; 
+}
+.menus a:hover {
+    background-color: #3bcf44;
+    color:black;
+}
+.sub1{
+    padding-left:40px;
+    padding-top: 40px;
+    font-family: 'Times New Roman';
+    font-size:x-large;
+
+}
+#flex{
+    display: flex;
+}
+.sub2{
+    padding-left:40px;
+    padding-top: 40px;
+    font-size: 40px;
+    color: crimson;
+}
+.sub3{
+    padding-top:20px;
+    padding-left:40px;
+    font-family: 'Times New Roman';
+    font-size:x-large;
+}
+.sub4{
+    padding-left: 40px;
+    padding-top:40px;
+}
+.sub5{
+    padding-left:40px;
+    padding-top:30px;
+    font-size: 40px;
+    color: crimson;
+
+}

@@ -1,0 +1,111 @@
+<div class="toolbar">
+  <div class="menus">
+  <a routerLink="../home">Home</a>
+  <div class="dropdown">
+    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Services
+    </button>
+    <ul class="dropdown-menu">
+       <li><a class="dropdown-item" routerLink="../insert">Insert</a></li>
+       <li><a class="dropdown-item" routerLink="../read">Get All</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Geography
+    </button>
+    <ul class="dropdown-menu">
+       <li><a class="dropdown-item" routerLink="../cropregion">CropRegion</a></li>
+       <li><a class="dropdown-item" routerLink="../rainfall">Rainfall</a></li>
+       <li><a class="dropdown-item" routerLink="../temperature">Temperature</a></li>
+       <li><a class="dropdown-item" routerLink="../soil">Soil</a></li>
+       <li><a class="dropdown-item" routerLink="../seasonal">Seasonal</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Practices
+    </button>
+    <ul class="dropdown-menu">
+       <li><a class="dropdown-item" routerLink="../fertilizers">Fertilizers</a></li>
+       <li><a class="dropdown-item" routerLink="../croprotation">CropRotation</a></li>
+       <li><a class="dropdown-item" routerLink="../adaptation">Adaptation</a></li>
+       <li><a class="dropdown-item" routerLink="../frequency">Frequency</a></li>
+       <li><a class="dropdown-item" routerLink="../timeperiod">TimePeriod</a></li>
+       <li><a class="dropdown-item" routerLink="../recommends">Recommendations</a></li>
+    </ul>
+  </div>
+  <a routerLink="../contactus">ContactUS</a>
+  <a routerLink="../agriculture">Agricultures</a>
+  <a routerLink="../impacts">Impacts</a>
+  <a routerLink="../benefits">Benefits</a>
+  <a routerLink="../habits">Habits</a>
+    <a routerLink="../investments">Investments</a>
+    <a routerLink="../constraints">Constraints</a>
+  <a routerLink="../about">Aboutus</a>
+  <a routerLink="../feedback">feedback</a>
+  <a routerLink="../graphs">Graphs</a>
+  <a routerLink="../firstpage">LogOut</a>
+  </div>
+  </div>
+    
+    <div class="d-block mx-auto w-50">
+      <label for="crop_name">crop_name</label>
+      <input type="text" name="crop_name" id="crop_name" class="form-control" [(ngModel)]="Roll" placeholder="Enter crop name">
+      <div class="d-flex my-2">
+          <input type="submit" value="Get all" class="btn btn-success" (click)="Read('All')">
+          <input type="submit" [value]="'Get '+ Roll" class="btn btn-success mx-1" (click)="Read(Roll)">
+      </div>
+      <p *ngIf="!(Results.length!=0 && GotResult)" class="text-danger">No Result to Show</p>
+    </div>
+    <table class="table w-50  mx-auto" *ngIf="Results.length!=0 && GotResult">
+      <thead class="thead-dark">
+          <tr>
+              <th scope="col">crop_name</th>
+              <th scope="col">year1_crop</th>
+              <th scope="col">year2_crop</th>
+              <th scope="col">year3_crop</th>
+              <th scope="col">year4_crop</th>
+              <th scope="col">crop_result</th>
+              <th scope="col">delete</th>
+              <th scope="col">update</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let Data of Results">
+              <th scope="row">{{Data[0]}}</th>
+              <td>{{Data[1]}}</td>
+              <td>{{Data[2]}}</td>
+              <td>{{Data[3]}}</td>
+              <td>{{Data[4]}}</td>
+              <td>{{Data[5]}}</td>
+              <td><input type="button" role="button" class="btn btn-danger" value="delete" (click)="Delete(Data[0])">
+              </td>
+              <td><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="Read1(Data[0])">
+                      Update
+                  </button>
+              </td>
+          </tr>
+      </tbody>
+    </table>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Updated Values</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="text" name="name" id="name" placeholder="crop name" class="form-control my-1" [(ngModel)]="UpdatedUser.crop_name">
+            <input type="text" name="id" id="id" placeholder="id" class="form-control my-1" [(ngModel)]="UpdatedUser.year1_crop">
+            <input type="text" name="id" id="id" placeholder="id" class="form-control my-1" [(ngModel)]="UpdatedUser.year2_crop">
+            <input type="text" name="id" id="id" placeholder="id" class="form-control my-1" [(ngModel)]="UpdatedUser.year3_crop">
+            <input type="text" name="id" id="id" placeholder="id" class="form-control my-1" [(ngModel)]="UpdatedUser.year4_crop">
+            <input type="text" name="id" id="id" placeholder="id" class="form-control my-1" [(ngModel)]="UpdatedUser.crop_result">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success"  data-bs-dismiss="modal" (click)="Update(UpdatedUser.crop_name,UpdatedUser)">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,107 @@
+<div class="toolbar">
+  <div class="menus">
+  <a routerLink="../home">Home</a>
+  <div class="dropdown">
+    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Services
+    </button>
+    <ul class="dropdown-menu">
+       <li><a class="dropdown-item" routerLink="../insert">Insert</a></li>
+       <li><a class="dropdown-item" routerLink="../read">Get All</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Practices
+    </button>
+    <ul class="dropdown-menu">
+       <li><a class="dropdown-item" routerLink="../cropregion">CropRegion</a></li>
+       <li><a class="dropdown-item" routerLink="../rainfall">Rainfall</a></li>
+       <li><a class="dropdown-item" routerLink="../temperature">Temperature</a></li>
+       <li><a class="dropdown-item" routerLink="../soil">Soil</a></li>
+       <li><a class="dropdown-item" routerLink="../seasonal">Seasonal</a></li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Practices
+    </button>
+    <ul class="dropdown-menu">
+       <li><a class="dropdown-item" routerLink="../fertilizers">Fertilizers</a></li>
+       <li><a class="dropdown-item" routerLink="../croprotation">CropRotation</a></li>
+       <li><a class="dropdown-item" routerLink="../adaptation">Adaptation</a></li>
+       <li><a class="dropdown-item" routerLink="../frequency">Frequency</a></li>
+       <li><a class="dropdown-item" routerLink="../timeperiod">TimePeriod</a></li>
+       <li><a class="dropdown-item" routerLink="../recommends">Recommendations</a></li>
+    </ul>
+  </div>
+  <a routerLink="../contactus">ContactUS</a>
+  <a routerLink="../agriculture">Agricultures</a>
+  <a routerLink="../impacts">Impacts</a>
+  <a routerLink="../benefits">Benefits</a>
+  <a routerLink="../habits">Habits</a>
+    <a routerLink="../investments">Investments</a>
+    <a routerLink="../constraints">Constraints</a>
+  <a routerLink="../about">Aboutus</a>
+  <a routerLink="../feedback">feedback</a>
+  <a routerLink="../graphs">Graphs</a>
+  <a routerLink="../firstpage">LogOut</a>
+  </div>
+  </div>
+<div class="container">
+  <div class="row">
+<form #insertForm="ngForm" (ngSubmit)="Insert(insertForm)">
+        <div class="message">
+    <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+    <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+    </div>
+    <div class="para">
+    <label>crop_name: </label>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <input type="text" name="crop_name" required   #crop_name="ngModel" ngModel>
+    <br/>
+    <br/>
+    <label>year1_crop: </label>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <input type="text"  required  name="year1_crop" #year1_crop="ngModel" ngModel>
+    <br/>
+    <br/>
+    <label>year2_crop: </label>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <input type="text"  required  name="year2_crop" #year2_crop="ngModel" ngModel>
+    <br/>
+    <br/>
+    <label>year3_crop: </label>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <input type="text"  required  name="year3_crop" #year3_crop="ngModel" ngModel>
+    <br/>
+    <br/>
+    <label>year4_crop: </label>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <input type="text"  required  name="year4_crop" #year4_crop="ngModel" ngModel>
+    <br/>
+    <br/>
+    <label>crop_result: </label>
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    <input type="text"  required  name="crop_result" #crop_result1="ngModel" ngModel>
+    <br/>
+    <br/>
+    <div class="val">
+    <input type="submit" value="Insert" class="btn btn-success my-2"  [disabled]="insertForm.invalid">&nbsp;&nbsp;
+    </div>
+    </div>
+</form>
+</div>
+</div>

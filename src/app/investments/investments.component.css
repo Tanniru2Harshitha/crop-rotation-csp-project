@@ -1,0 +1,49 @@
+.toolbar{
+    background-color: green;
+    padding:10px;
+}
+.menus{
+    display:flex;
+}
+.menus a{
+    text-decoration: none; 
+  color: #bea3a3; 
+  padding: 8px 12px; 
+  margin-right: 10px; 
+  border-radius: 4px; 
+}
+.menus a:hover {
+    background-color: #3bcf44;
+    color:black;
+}
+.image{
+    height: 40vh;
+    width: 50vw;
+    margin-left: 300px;
+    padding-top: 30px;
+}
+    .con{
+    background-image: url("https://img.freepik.com/free-photo/green-field-tree-blue-skygreat-as-backgroundweb-banner-generative-ai_1258-158220.jpg?q=10&h=200");
+    background-repeat: no-repeat;
+    height: 120vh;
+    width: 100vw;
+    background-size: cover;
+}
+.para{
+    font-size:20px;
+    padding: 10px;
+    color: azure;
+    font-family: "Sans serif";
+}
+.head{
+    font-size: 30px;
+    padding-left: 20px;
+    color:azure;
+    text-decoration: underline;
+    font-family: sans-serif;
+}
+.cons{
+    font-size:  20px;
+    color: azure;
+    font-family:sans-serif;
+}

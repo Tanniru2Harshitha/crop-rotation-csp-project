@@ -1,0 +1,40 @@
+.toolbar{
+    background-color: green;
+    padding:10px;
+}
+.menus{
+    display:flex;
+}
+.menus a{
+    text-decoration: none; 
+  color: #bea3a3; 
+  padding: 8px 12px; 
+  margin-right: 10px; 
+  border-radius: 4px; 
+}
+.menus a:hover {
+    background-color: #3bcf44;
+    color:black;
+}
+.sub{
+    padding-left: 550px;
+    padding-top: 40px;
+}
+.container{
+    background-image: url("https://www.shutterstock.com/image-photo/soil-background-plant-600w-104251184.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+    width:200vh;
+}
+.soil{
+    font-size: 40px;
+    color: azure;
+    padding-top: 20px;
+
+    font-style: italic;
+}
+.center{
+    color: azure;
+    padding-top: 20px;
+}

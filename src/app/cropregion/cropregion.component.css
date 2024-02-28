@@ -1,0 +1,39 @@
+.toolbar{
+    background-color: green;
+    padding:10px;
+}
+.menus{
+    display:flex;
+}
+.menus a{
+    text-decoration: none; 
+  color: #bea3a3; 
+  padding: 8px 12px; 
+  margin-right: 10px; 
+  border-radius: 4px; 
+}
+.menus a:hover {
+    background-color: #3bcf44;
+    color:black;
+}
+.background
+{
+    background-image: url(../../assets/cropregion_background.webp);
+    background-position: center top;
+    background-size: cover;
+    text-align: center;
+}
+.background p
+{
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: solid ;
+}
+.background h2
+{
+    font-weight: bold;
+}
+.background h1{
+    font-weight: bolder;
+}

@@ -1,0 +1,44 @@
+.toolbar{
+    background-color: green;
+    padding:10px;
+}
+.menus{
+    display:flex;
+}
+.menus a{
+    text-decoration: none; 
+  color: #bea3a3; 
+  padding: 8px 12px; 
+  margin-right: 10px; 
+  border-radius: 4px; 
+}
+.menus a:hover {
+    background-color: #3bcf44;
+    color:black;
+}
+.container{
+    background-image:url("https://kj1bcdn.b-cdn.net/media/67938/crop.jpg?width=1200");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img{
+    
+    height:300px;
+    width:400px;
+    padding-top:15px ;
+}
+.con{
+    text-align: center;
+}
+.size{
+    font-size: 20px;
+    color:white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.seasional{
+    color: black;
+    padding-left: 30px;
+    text-decoration: underline;
+    font-weight: 400;
+}

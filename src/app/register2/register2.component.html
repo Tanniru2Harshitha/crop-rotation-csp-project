@@ -1,0 +1,39 @@
+<div class="container">
+  <br/><br/><br/><br/>
+<div class="registration-form">
+    <h2>Registration Form</h2>
+    <form  #insertForm="ngForm" (ngSubmit)="Insert(insertForm)" >
+      <div class="message">
+        <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+        <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+        </div>
+      <div>
+        <label for="name">FirstName:</label>
+        <input type="text"  class = "form-control" name="fname" id="fname"  required   #fname="ngModel" ngModel>
+      </div>
+      <div>
+        <label for="name">LastName:</label>
+        <input type="text"  class = "form-control" name="lname" id="lname"  required   #lname="ngModel" ngModel>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email"  class = "form-control" name="email" id="email"  required   #email="ngModel" ngModel>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" class = "form-control" name="password" id="password"  required   #password="ngModel" ngModel>
+      </div>
+      <div>
+        <label for="password">Confirm Password:</label>
+        <input type="password" class = "form-control" name="cpassword" id="cpassword" required   #cpassword="ngModel" ngModel>
+      </div>
+      <button type="submit">Register</button>
+      <div class="alternative-signin">
+        <p>Not a member? <a routerLink="../login">Sign-in</a></p>
+      </div>
+    
+    </form>
+  </div>
+  <br/><br/><br/><br/>
+  </div>
+  <router-outlet></router-outlet>
